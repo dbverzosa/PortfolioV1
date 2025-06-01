@@ -1,124 +1,350 @@
+/* Reset default styles for all elements */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Base Styles for the whole document */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #fdfdfd;
-  color: #333;
-  scroll-behavior: smooth;
+  background: #000; /* Black background */
+  color: #fff; /* White text */
+  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
 
+/* General container class for layout alignment and spacing */
 .container {
   width: 90%;
   max-width: 1000px;
   margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
+/* Header styles */
 header {
-  background: #004d99;
-  color: white;
+  background: #111; /* Dark background */
+  color: #fff;
   padding: 20px 0;
-  position: sticky;
+  position: sticky; /* Sticks to top on scroll */
   top: 0;
-  z-index: 1000;
+  z-index: 1000; /* Ensures it stays on top */
+  border-bottom: 1px solid #444; /* Subtle border */
 }
 
+/* Navigation bar alignment */
+nav {
+  display: flex;
+  align-items: flex-start; /* Top alignment of items */
+}
+
+/* Flex layout for header content */
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
+/* Nav links styling */
 nav a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   margin-left: 20px;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
+/* Hover effect for nav links */
 nav a:hover {
-  text-decoration: underline;
+  color: #ccc;
 }
 
+/* Hero Section */
 .hero {
-  background: linear-gradient(to right, #0077cc, #66ccff);
-  color: white;
-  padding: 100px 20px 120px; /* Increased bottom padding */
-  text-align: center;
+  background: #000;
+  color: #fff;
+  padding: 100px 20px 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-bottom: 1px solid #222;
 }
 
+/* Hero container layout */
+.hero .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  flex-direction: row;
+}
+
+/* Text content in hero section */
+.hero-text {
+  flex: 1 1 300px;
+  min-width: 250px;
+  order: 2; /* Appears second - text on the right */
+}
+
+/* Location icon text styling */
+.hero-text p {
+  color: #ccc;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+/* Icon color */
+.location-icon {
+  font-size: 1.2rem;
+  color: #ff5555;
+}
+
+/* Hero heading */
 .hero h2 {
   font-size: 2.5rem;
   margin-bottom: 15px;
 }
 
+/* Hero paragraph text */
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 25px;
+  color: #ddd;
 }
 
+/* Button in hero section */
 .hero .btn {
-  background: white;
-  color: #0077cc;
+  background: #fff;
+  color: #000;
   padding: 12px 25px;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
   display: inline-block;
 }
 
+/* Hover effect for button */
 .hero .btn:hover {
-  background: #f0f0f0;
+  background: #ccc;
+  color: #000;
 }
 
-section {
-  padding: 60px 0;
+/* Profile image next to hero text */
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 0;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+  animation: float 6s ease-in-out infinite;
+  flex-shrink: 0;
+  order: 1; /* Appears first - image on the left */
 }
 
-h2 {
-  color: #0077cc;
-  margin-bottom: 20px;
+/* About section paragraph text */
+#about p {
+  text-align: justify;
+  line-height: 1.6;
+  margin-bottom: 1em;
 }
 
-.card {
-  background: #ffffff;
-  padding: 20px;
-  margin: 20px 0;
-  border-left: 4px solid #0077cc;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+/* Tech Stacks Section */
+/* List of tech items aligned left */
+.tech-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  padding-left: 0;
 }
 
-a {
-  color: #0077cc;
+/* Individual technology item */
+.tech-list li {
+  background-color: #222;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-left: 0;
 }
 
-footer {
-  background: #004d99;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
+/* Timeline Section */
+.timeline {
+  list-style: none;
+  position: relative;
+  padding-left: 30px;
+  margin-top: 30px;
+  border-left: 3px solid #fff;
 }
 
-/* Fade-in animation */
+/* Timeline item */
+.timeline li {
+  margin-bottom: 30px;
+  position: relative;
+  padding-left: 20px;
+}
+
+/* Circle before each timeline item */
+.timeline li::before,
+.timeline li.latest::before {
+  content: '';
+  position: absolute;
+  left: -11px;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+/* Default timeline bullet (hollow) */
+.timeline li::before {
+  background: transparent;
+  border: 0px solid #fff;
+}
+
+/* Filled circle for latest item */
+.timeline li.latest::before {
+  background: #fff;
+  border: none;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+}
+
+/* Hover effect for timeline bullet */
+.timeline li:hover::before {
+  background: #fff;
+  border-color: #fff;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}
+
+/* Date label for each timeline item */
+.timeline-date {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #ccc;
+  display: block;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Timeline item title */
+.timeline h3 {
+  margin-bottom: 6px;
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+/* Timeline item description */
+.timeline p {
+  color: #ddd;
+  line-height: 1.4;
+  font-size: 1rem;
+}
+
+/* Animation for profile image floating effect */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Fade-in class for animations */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
+/* Class to trigger fade-in animation */
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Responsive */
+/* Padding for all sections */
+section {
+  padding: 60px 0;
+}
+
+/* Section headings */
+h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Card style container */
+.card {
+  background: #1a1a1a;
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 4px solid #fff;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+/* Anchor tag styling */
+a {
+  color: #fff;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for anchor tags */
+a:hover {
+  color: #ccc;
+  text-decoration: none;
+}
+
+/* Footer styling */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #444;
+}
+
+/* Responsive Styles for Mobile */
 @media (max-width: 768px) {
-  .hero h2 {
-    font-size: 2rem;
+  .hero {
+    flex-direction: column;
+    text-align: center;
+      align-items: center;
+  }
+
+  .profile-img {
+    order: 0; /* Show image on top */
+    margin-top: 20px;
+    width: 280px;
+    height: 280px;
+  }
+
+  .hero-text {
+    order: 1; /* Text below image */
+  }
+
+  nav a {
+    margin: 10px 10px 0 0;
+    display: inline-block;
   }
 
   header .container {
@@ -126,8 +352,10 @@ footer {
     align-items: flex-start;
   }
 
-  nav a {
-    margin: 10px 10px 0 0;
-    display: inline-block;
+  .hero .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
+
 }

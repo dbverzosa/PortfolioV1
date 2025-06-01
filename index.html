@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Debby Verzosa | Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <header>
     <div class="container">
-      <h1>CODER DEBBY VERZOSA</h1>
+
       <nav>
+        <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
@@ -18,20 +21,110 @@
     </div>
   </header>
 
-  <section class="hero">
+  <section id="home" class="hero">
     <div class="container">
-      <h2>Hello, I'm Debs 👋</h2>
-      <p>Web & Mobile Developer from Butuan City</p>
-      <a href="#projects" class="btn">See My Work</a>
+      <div class="hero-text">
+        <h2>Debby Verzosa</h2>
+        <p>
+          <img src="images/location-icon.jpg" alt="Location Icon" class="location-icon"
+            style="width:16px; height:16px; vertical-align: middle; margin-right: 5px;" />
+          Butuan City, Philippines
+        </p>
+        <p>Full Stack Developer </p>
+        <a href="#projects" class="btn">See My Work</a>
+      </div>
+      <img src="images/profile.jpg" alt="Debby Verzosa" class="profile-img" />
     </div>
   </section>
+
 
   <section id="about" class="fade-in">
     <div class="container">
       <h2>About Me</h2>
-      <p>I build clean and functional applications using React Native, Laravel, and WordPress. I focus on user experience and real-world impact.</p>
+
+      <p>
+        I’m an aspiring full-stack developer with an intern experience at AFTECH,
+        where I contributed to building practical software solutions and integrating APIs into internal applications.
+        I specialize in mobile and web development, focusing on real-time data handling and geolocation features. I also
+        developed a car dealership web application project that streamlined sales processes and improved user
+        experience.
+      </p>
+
+      <p>
+        In addition to development, I have hands-on expertise configuring networking equipment such as Ubiquiti
+        NanoStation radios and MikroTik routers. I also manage ITE and Networking courses, guiding students through
+        programming and networking fundamentals to build their practical skills.
+      </p>
+
+      <p>
+        I’m passionate about leveraging technology to solve real-world problems and committed to continuous learning.
+      </p>
+
+      <p></p>
+      Currently, I’m deepening my knowledge in networking and full-stack development to contribute to impactful and
+      meaningful technology solutions.
+      </p>
+
+
     </div>
   </section>
+
+
+
+  <section id="tech-stack" class="fade-in">
+    <div class="container">
+      <h2>Tech Stack</h2>
+      <ul class="tech-list">
+        <li>React Native</li>
+        <li>Laravel</li>
+        <li>ReactJS</li>
+        <li>Firebase</li>
+        <li>JavaScript (ES6+)</li>
+        <li>HTML & CSS</li>
+        <li>Git & GitHub</li>
+        <li>MySQL</li>
+        <li>WordPress</li>
+        <li>Ajax </li>
+        <li>JQuery </li>
+        <li>C </li>
+        <li>Java </li>
+        <li>PHP </li>
+        <li>BootStrap </li>
+      </ul>
+    </div>
+  </section>
+
+
+
+  <section id="journey" class="fade-in">
+    <div class="container">
+      <h2>My Journey</h2>
+      <ul class="timeline">
+        <li class="latest">
+          <span class="timeline-date">2024</span>
+          <h3>Current Work</h3>
+          <p>Working on Laravel Dealer Dashboard and expanding my skills in full-stack development.</p>
+        </li>
+        <li>
+          <span class="timeline-date">2021</span>
+          <h3>WordPress Plugin Development</h3>
+          <p>Created WordPress plugins such as SmartHR Plugin for automated email reminders.</p>
+        </li>
+        <li>
+          <span class="timeline-date">2020</span>
+          <h3>React Native Projects</h3>
+          <p>Developed mobile apps with React Native including the iSafeButuan emergency reporting app.</p>
+        </li>
+        <li>
+          <span class="timeline-date">2019</span>
+          <h3>First Internship</h3>
+          <p>Started learning web development basics and built simple projects with HTML, CSS, and JavaScript.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
 
   <section id="projects" class="fade-in">
     <div class="container">
@@ -61,10 +154,11 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 Debs Verzosa</p>
+      <p>&copy; 2025 | Debby Verzosa</p>
     </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>
